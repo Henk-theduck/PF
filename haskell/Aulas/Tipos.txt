@@ -1,0 +1,76 @@
+tipos em haskell
+
+-tipagem forte
+compilador verifica tipos antes de avaliar as expressões
+coerções de valores explicitas
+evita alguns tipos de bug
+tipo de cada valor conhecido durante a compilação
+
+-inferência
+deduzir os tipos das expressões
+declaração de tipo opcional
+tipo inferido é o mais amploo possivel
+
+tipos primitivos
+Char
+Bool
+Int - tamanho depende da arquitetura
+Integer - tamanho depende da memoria (mais custoso)
+Float
+Double
+
+Operações com Inteiros
++,*,-,^
+div
+mod
+negate
+>,>=,==,/=,<=,<
+
+exemplo: considere uma função que retorne a quantidade de vendas de um a empresa na semana
+venda::Int->Int
+venda 0 = 5
+venda 1 = 6
+venda 2 = 4
+venda 3 = 8
+
+questoes
+1 - Qual o total de vendas?
+2 - Qual a maior venda?
+3 - Em que semana ocorreu a maior venda?
+4 - Existiu semana sem venda?
+
+--tipo Ponto flutuante
+mais comuns: Float e Double
+operadores numericos sobrecarregados
+exp 
+FromInt
+log
+signum
+sqrt
+
+ -- Tipo Booleano
+ valores possiveis : True e False
+ operações 
+ &&
+ ||
+ not
+
+ -- Tipo caractere
+ Literais escritos entre aspas simples
+ operações
+ toEnum
+ FromEnum
+
+ -- Tipo String
+ lista de caracteres
+ texto entre aspas duplas
+ lista de literias entre aspas simples
+   ex.: 
+   "Teste"
+   ['t','e','s','t','e']
+
+todas as funções de listas são aplicaveis a strings
+operações
+    putStr :: String -> IO()
+    show :: t -> String
+    read :: String -> t
