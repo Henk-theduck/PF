@@ -1,5 +1,4 @@
-import System.Win32 (COORD(x))
-import Control.Monad.Cont (cont)
+
 -- Questão 1 potencia
 pot :: Int -> Int -> Int
 pot m n
