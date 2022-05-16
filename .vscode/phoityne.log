@@ -1,9 +1,0 @@
-2022-05-05 19:24:15 [ThreadId 3] ERROR phoityne - ghci launch error. <file descriptor: 5>: hPutChar: resource vanished (Broken pipe)
-
-2022-05-05 19:24:16 [ThreadId 3] ERROR phoityne - [disconnectRequestHandler] ghci not started.
-2022-05-05 19:24:33 [ThreadId 3] ERROR phoityne - ghci launch error. <file descriptor: 5>: hPutChar: resource vanished (Broken pipe)
-
-2022-05-05 19:24:33 [ThreadId 3] ERROR phoityne - [disconnectRequestHandler] ghci not started.
-2022-05-05 19:47:20 [ThreadId 3] ERROR phoityne - load file fail.[C:/Users/luish/OneDrive/Área de Trabalho/IFMA/Ciência da computação/7 semestre/Programação Funcional/test/Spec.hs]
-2022-05-05 19:47:20 [ThreadId 3] ERROR phoityne - startup load error. C:/Users/luish/OneDrive/Área de Trabalho/IFMA/Ciência da computação/7 semestre/Programação Funcional/test/Spec.hs
-
