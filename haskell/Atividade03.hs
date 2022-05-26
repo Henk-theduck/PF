@@ -74,13 +74,18 @@ mdc m n
         | mod n m == 0 = m
         | otherwise =  auxMdc m n 2
 
+dc x y 
+        |x < y = dc y x
+        | y==0 = x
+        | otherwise = dc y (mod x y)
+
 -- retornar o minimo multiplo comum entre dois numeros positivos
 auxMmc :: Int -> Int -> Int -> Int
 auxMmc m n p
         | m == 1 && n == 1 = 1
         | mod m (nPrimo p) == 0 && mod n (nPrimo p) == 0 = nPrimo p * auxMmc (div m (nPrimo p)) (div n (nPrimo p)) p
-        | mod m (nPrimo p) == 0 && mod n (nPrimo p) /= 0 = nPrimo p * auxMmc (div m (nPrimo p)) n p
-        | mod m (nPrimo p) /= 0 && mod n (nPrimo p) == 0 = nPrimo p * auxMmc m (div n (nPrimo p)) p
+        | mod n (nPrimo p) /= 0 = nPrimo p * auxMmc (div m (nPrimo p)) n p
+        | mod m (nPrimo p) /= 0 = nPrimo p * auxMmc m (div n (nPrimo p)) p
         | otherwise = auxMmc m n (p+1)
 
 mmc :: Int -> Int -> Int
