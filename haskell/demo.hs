@@ -1,17 +1,25 @@
-tuple = (1, 2)
+type Hora = (Int, Int, Int)
 
-tuple3 = (1, 2, 3)
+validateHour :: Hora -> Bool
+validateHour (h,m,s)
+        | s < 0 || s > 59 = False
+        | m < 0 || m > 59 = False
+        | h < 0 || h > 23 = False
+        |otherwise = True
 
-first (a, _, _) = a
-second (_, b, _) = b
-third (_, _, c) = c
+convertHour :: Hora -> Int
+convertHour (h,m,s)
+            | not(validateHour(h,m,s)) = 0
+            | otherwise = (h*3600) + (m*60) + s
 
-main = do
-    print tuple
-    print $ fst tuple
-    print $ snd tuple
 
-    print tuple3
-    print $ first tuple3
-    print $ second tuple3
-    print $ third tuple3
+returnHour :: Int -> Int
+returnHour n = div n 3600
+
+returnMinutes :: Int -> Int
+returnMinutes n = subtract (div n 60) (returnHour n)
+
+-- convertSeconds :: Int -> Hora 
+-- convertSeconds n
+--             | n < 59 = (0,0,n)
+--             | otherwise =

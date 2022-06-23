@@ -63,6 +63,6 @@ auxSomaGemeos n i j
                     | otherwise = auxSomaGemeos n (i+1) (j+1)
 
 somaGemeos :: Int -> Int
-somaGemeos n = auxSomaGemeos n 1 2
+somaGemeos n = auxSomaGemeos n 2 3
 
 
