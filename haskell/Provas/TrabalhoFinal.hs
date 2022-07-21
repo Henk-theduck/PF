@@ -1,4 +1,3 @@
-import System.Win32 (COORD(x))
 
 -- Trabalho final
 -- Estoque de Produtos
